@@ -35,10 +35,6 @@ unfold.addEventListener("click", () => {
 });
 
 // --- Zdarzenia zewnętrzne ---
-const dataReloadEvent = () => {
-  console.log("Dane nie są ładowane (setData wyłączone).");
-};
-
 const imageReloadEvent = (image) => {
   setImage(image);
 };
@@ -53,8 +49,3 @@ function setImage(image) {
   }
 }
 
-// --- setData wyłączone ---
-function setData(id, value) {
-  // Funkcja celowo pusta — dane nie są wstawiane
-  console.log(`setData(${id}, ${value}) zablokowane.`);
-}
