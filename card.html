@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" href="assets/app/logo.png">
   <link rel="shortcut icon" href="assets/app/logo.png">
 
-  <!-- 👇 Zmieniony styl – mniejszy, realistyczny jak w dowodzie -->
+  <!-- Styl: IMIĘ/Nazwisko większe, data/PESEL mniejsze ale pogrubione -->
   <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -27,15 +27,36 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Imię, nazwisko */
-  .data_title {
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 1.05;
-    letter-spacing: 0.2px;
+  /* Imię i nazwisko */
+  #name, .data_title.firstname {
+    font-size: 15px !important;
+    font-weight: 710 !important;
   }
 
-  /* Opisy pod polami */
+  #surname, .data_title.surname {
+    font-size: 15px !important;
+    font-weight: 710 !important;
+  }
+
+  /* Obywatelstwo */
+  #nationality {
+    font-size: 15px !important;
+    font-weight: 710 !important;
+  }
+
+  /* Data urodzenia i PESEL — mniejsze, ale pogrubione */
+  #birthday {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+  }
+
+  #pesel_value {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.4px;
+  }
+
+  /* Opisy pól */
   .data_value {
     font-weight: 400;
     font-size: 12px;
@@ -43,7 +64,7 @@
     margin-top: 1px;
   }
 
-  /* Sekcje dodatkowe (Imię ojca, matki, itd.) */
+  /* Pozostałe sekcje */
   .box_top {
     font-weight: 500;
     font-size: 12px;
@@ -51,7 +72,7 @@
 
   .box_value {
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .under_text, .bottom_text, .additional_title {
@@ -64,19 +85,12 @@
     font-weight: 400;
   }
 
-  /* PESEL / Numery */
-  .data_title.pesel_value, .box_value.box_highlight {
-    font-weight: 700;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-  }
-
   @media (max-width: 480px) {
-    .data_title { font-size: 15px; }
-    .box_value { font-size: 13px; }
+    #name, #surname { font-size: 20px !important; }
+    #nationality { font-size: 13px !important; }
+    #birthday, #pesel_value { font-size: 13px !important; }
   }
   </style>
-  <!-- 👆 Koniec zmienionego stylu -->
 </head>
 
 <body>
